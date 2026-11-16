@@ -4,6 +4,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Fixed port: Google only accepts the exact origin registered (http://localhost:5173)
+  server: { port: 5173, strictPort: true },
   plugins: [
     react(),
     VitePWA({
